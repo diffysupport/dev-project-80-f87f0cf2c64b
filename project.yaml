@@ -1,0 +1,62 @@
+basic:
+    name: bbc.com
+    environments:
+        production: 'https://bbc.com'
+        staging: ''
+        development: ''
+    breakpoints:
+        - 320
+        - 640
+        - 768
+        - 960
+        - 1024
+        - 1080
+        - 1200
+    pages:
+        - /
+        - /news
+        - /sport
+        - /business
+        - /innovation
+        - '/doctors?type=All&geolocation%5Bloc%5D%5Btext%5D=&geolocation%5Bloc%5D%5Blatlng%5D=&name=jones&practice=&lang=All&gender=All&aff=All&sort_by=sort-rel'
+    monitoring:
+        days: {  }
+        type: daily
+        schedule_time: '12:30 AM'
+        schedule_time_zone: Europe/London
+        compare_with: last-production
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    delay: 15
+    scroll: true
+    headers:
+        - { value: '', header: '' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content:
+        - { type: title, selector: '' }
+    sensitivity: 15
+    night_mode: false
+    retina_images: false
+    login:
+        type: none
+        click_element: false
+        click_element_selector: ''
+        login_url: ''
+        username: ''
+        password: ''
+        username_selector: ''
+        password_selector: ''
+        submit_selector: ''
+        after_login_selector: ''
+    performance:
+        workers_production: 30
+        workers_nonproduction: 10
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
+proxy: false
+type: single-site
